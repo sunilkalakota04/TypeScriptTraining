@@ -1,12 +1,11 @@
-function add(a: number, b: number): string {
-    return "Sum is " + (a + b);
+function myFunc<T>(arg:T): T{
+return arg
 }
+let r = myFunc<number>(100)
+console.log(`Generic Function result:${r}`);
 
-let substract: (a: number, b: number) => number;
-substract = (a,b) => a-b;
+let str = myFunc<string>('typescript')
+console.log(`Generic Function result:${str}`);
 
-let multiply = (a:number, b:number):number => a*b;
-
-let result = add(5,2)
-console.log(result);
-console.log(substract)
+let booldata = myFunc<boolean>(true)
+console.log(`Generic Function result:${booldata}`);
